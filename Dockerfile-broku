@@ -1,0 +1,8 @@
+FROM php:7.4-apache
+
+# Install mysqli
+RUN docker-php-ext-install mysqli
+
+# Enable Apache rewrite module (optional, for .htaccess)
+RUN a2enmod rewrite
+
